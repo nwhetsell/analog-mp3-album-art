@@ -18,12 +18,12 @@ jobs:
         sudo ./install-tl -no-gui -profile=texlive.profile
         echo /usr/local/texlive/bin/universal-darwin >> $GITHUB_PATH
 
-     - name: Install TeX packages
-       run: >
-         sudo tlmgr install
-         fontspec
-         standalone
-         xetex
+    - name: Install TeX packages
+      run: >
+        sudo tlmgr install
+        fontspec
+        standalone
+        xetex
 
     - name: Create album art
       run: ./create
