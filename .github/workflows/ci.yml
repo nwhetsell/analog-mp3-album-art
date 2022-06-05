@@ -24,6 +24,7 @@ jobs:
         fontspec
         standalone
         xetex
+        xkeyval
 
     - name: Create album art
       run: ./create
