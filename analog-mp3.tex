@@ -1,0 +1,44 @@
+\documentclass{standalone}
+
+\usepackage{fontspec}
+
+\IfFontExistsTF{ITC Avant Garde Gothic W1G Bold}{
+  \setmainfont{ITC Avant Garde Gothic W1G Bold}
+}{}
+
+\setlength\tabcolsep{0.1ex}
+\renewcommand\arraystretch{1}
+\renewcommand\baselinestretch{0.7}
+
+\begin{document}
+
+\huge
+
+\hspace{1ex}%
+\begin{tabular}{c@{\hskip 0.4ex}cc}
+  \\
+
+  % From https://tex.stackexchange.com/questions/354410/how-should-the-effects-of-manipulating-specials-be-switched-off
+  \special{pdf:bcolor [1] [0]}% Fill color ([1], white) followed by stroke color ([0], black)
+  \special{pdf:literal direct 0.4 w 2 Tr}% 0.4 is the stroke width
+  {\addfontfeature{Alternate=0} A} & L &%
+  \special{pdf:ecolor}%
+  \special{pdf:literal direct 0 Tr}%
+  {\addfontfeature{Alternate=0} M} \\
+
+  \special{pdf:bcolor [1] [0]}%
+  \special{pdf:literal direct .4 w 2 Tr}%
+  N & O &%
+  \special{pdf:ecolor}%
+  \special{pdf:literal direct 0 Tr}%
+  P \\
+
+  \special{pdf:bcolor [1] [0]}%
+  \special{pdf:literal direct .4 w 2 Tr}%
+  A & G &%
+  \special{pdf:ecolor}%
+  \special{pdf:literal direct 0 Tr}%
+  3 \\
+\end{tabular}
+
+\end{document}

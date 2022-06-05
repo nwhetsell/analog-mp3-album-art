@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+xelatex -interaction=errorstopmode analog-mp3.tex
+
+convert -trim -density 2800 -alpha Remove -gravity Center -extent 3000x3000 analog-mp3.pdf analog-mp3.png
