@@ -26,11 +26,5 @@ jobs:
         xetex
         xkeyval
 
-    - name: Create album art
+    - name: Create logotypes
       run: ./create
-
-    - name: Archive album art
-      uses: actions/upload-artifact@main
-      with:
-        name: analog-mp3
-        path: analog-mp3.png
