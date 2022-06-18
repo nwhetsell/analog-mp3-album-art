@@ -2,6 +2,8 @@
 
 set -e
 
-xelatex -interaction=errorstopmode analog-mp3.tex
+xelatex -interaction=errorstopmode analog-mp3-bandcamp.tex
+convert -trim -density 471 -alpha Remove -gravity Center -extent 975x107 analog-mp3-bandcamp.pdf analog-mp3-bandcamp.png
 
-convert -trim -density 2800 -alpha Remove -gravity Center -extent 3000x3000 analog-mp3.pdf analog-mp3.png
+xelatex -interaction=errorstopmode analog-mp3-soundcloud.tex
+convert -trim -density 2800 -alpha Remove -gravity Center -extent 3000x3000 analog-mp3-soundcloud.pdf analog-mp3-soundcloud.png

@@ -1,2 +1,4 @@
-analog-mp3.*
-!analog-mp3.tex
+analog-mp3-bandcamp.*
+!analog-mp3-bandcamp.tex
+analog-mp3-soundcloud.*
+!analog-mp3-soundcloud.tex
